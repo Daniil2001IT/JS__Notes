@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="shortcut icon" href="https://result.school/logo-result.school.png" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous" />
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <title>02. JS Array & Objects</title>
+</head>
+
+<body class="bg-dark text-light">
+  <div class="container w-50 pt-5">
+    <h1 class="asasaaa">Заметки</h1>
+    <input type="text" class="form-control mb-2" placeholder="Введите название" id="title" />
+    <button class="btn btn-outline-info w-100 mb-2" id="create">
+      Добавить
+    </button>
+
+
+
+    <input type="text" class="form-control mb-2" placeholder="Поиск..." id="search">
+    <div class="btn-group w-100 mb-2">
+      <button class="btn btn-outline-info active" data-filter="all">Все</button>
+      <button class="btn btn-outline-info" data-filter="active">Активные</button>
+      <button class="btn btn-outline-info" data-filter="completed">Выполненные</button>
+    </div>
+    <div id="counter" class=" h4 text-center mb-2"></div>
+    <div class="progress mb-3" style="height: 20px;">
+      <div id="progressBar" class="progress-bar " role="progressbar" style="width: 0%;" aria-valuenow="0"
+        aria-valuemin="0" aria-valuemax="100">
+        0%
+      </div>
+    </div>
+
+
+    <ul class="list-group list-group-flush" id="list">
+      <li class="list-group-item d-flex justify-content-between align-items-center">
+        <span>Название</span>
+        <span>
+          <span class="btn btn-small btn-success">&check;</span>
+          <span class="btn btn-small btn-danger">&times;</span>
+        </span>
+      </li>
+    </ul>
+
+
+
+
+    <div class="modal fade" id="deleteModal" tabindex="-1">
+      <div class="modal-dialog">
+        <div class="modal-content bg-dark text-light">
+          <div class="modal-header">
+            <h5 class="modal-title">Подтверждение удаления</h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+          </div>
+          <div class="modal-body">
+            Вы уверены, что хотите удалить эту заметку?
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Отмена</button>
+            <button type="button" class="btn btn-danger" id="confirmDelete">Удалить</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/main.js" defer></script>
+</body>
+
+</html>
